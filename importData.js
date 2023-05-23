@@ -14,6 +14,16 @@ database.serialize(() => {
       price REAL
     )
   `);
+  database.run(`
+     CREATE TABLE IF NOT EXISTS users (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL,
+  username TEXT NOT NULL UNIQUE,
+  password TEXT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)
+  `);
+
 
   // Import data from CSV file
   fs.createReadStream("historical_prices.csv")

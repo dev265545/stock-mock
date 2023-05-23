@@ -1,4 +1,4 @@
-import holdingsResponse from "../../../mocks/holdings.json"
+import holdingsResponse from "../../../mocks/holdings_response.json"
 
 export default function handler(req, res) {
   if (req.method === "GET") {
