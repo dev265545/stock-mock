@@ -1,5 +1,5 @@
 
-import placeOrderResponse from "../../../mock/order_placed.json";
+import placeOrderResponse from "../../../mocks/order_placed.json"
 
 export default function handler(req, res) {
   if (req.method === "POST") {
