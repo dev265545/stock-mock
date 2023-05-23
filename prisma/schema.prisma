@@ -1,0 +1,16 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider = "mysql"
+  url = "mysql://root:2479wruo@localhost:3306/true_beacon"
+  relationMode = "prisma"
+}
+model HistoricalPrice {
+  id        Int     @id @default(autoincrement())
+ instrument_name    String
+  date      DateTime
+  price    Float
+}
